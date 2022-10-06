@@ -1,0 +1,162 @@
+Statistical profiling result from isolate-000001A390467830-14744-v8.log, (2555 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2176   85.2%          C:\Windows\SYSTEM32\ntdll.dll
+    347   13.6%          D:\Program Files\nodejs\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.2%   18.8%  LazyCompile: *SourceNode_walk D:\angel\Documents\mocks-coderhouse\node_modules\source-map\lib\source-node.js:221:53
+      3    0.1%    9.4%  LazyCompile: *wrap D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      3    0.1%    9.4%  Function: ^deserializeObject D:\angel\Documents\mocks-coderhouse\node_modules\bson\lib\parser\deserializer.js:65:27
+      2    0.1%    6.3%  LazyCompile: *generateList D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:143:38
+      1    0.0%    3.1%  RegExp: ^(?:-?[0-9]+(?:\.[0-9]+)?(?=([~}\s)])))
+      1    0.0%    3.1%  LazyCompile: *resolve node:path:158:10
+      1    0.0%    3.1%  LazyCompile: *readFileAfterClose node:internal/fs/read_file_context:46:28
+      1    0.0%    3.1%  LazyCompile: *parse D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      1    0.0%    3.1%  LazyCompile: *appendContent D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:375:40
+      1    0.0%    3.1%  LazyCompile: *anonymous D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:549:49
+      1    0.0%    3.1%  LazyCompile: *accept D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:101:26
+      1    0.0%    3.1%  LazyCompile: *SourceNode D:\angel\Documents\mocks-coderhouse\node_modules\source-map\lib\source-node.js:35:20
+      1    0.0%    3.1%  LazyCompile: *<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:30:40
+      1    0.0%    3.1%  LazyCompile: *<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      1    0.0%    3.1%  Function: ^translatePeerCertificate node:_tls_common:129:34
+      1    0.0%    3.1%  Function: ^readFile D:\angel\Documents\mocks-coderhouse\node_modules\graceful-fs\graceful-fs.js:111:21
+      1    0.0%    3.1%  Function: ^processTimers node:internal/timers:487:25
+      1    0.0%    3.1%  Function: ^isInline D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:956:30
+      1    0.0%    3.1%  Function: ^dispatch D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\route.js:98:45
+      1    0.0%    3.1%  Function: ^clearBuffer node:internal/streams/writable:531:21
+      1    0.0%    3.1%  Function: ^<anonymous> node:internal/fs/utils:671:38
+      1    0.0%    3.1%  Function: ^<anonymous> :1:1
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     32    1.3%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     19    0.7%   59.4%  GC
+   2523   98.7%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2176   85.2%  C:\Windows\SYSTEM32\ntdll.dll
+
+    347   13.6%  D:\Program Files\nodejs\node.exe
+    243   70.0%    D:\Program Files\nodejs\node.exe
+     62   25.5%      Function: ^compileFunction node:vm:316:25
+     62  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1040:18
+     55   88.7%          Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+     55  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      7   11.3%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1080:37
+      7  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+     22    9.1%      Function: ^stat node:internal/modules/cjs/loader:151:14
+     11   50.0%        Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      8   72.7%          Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      6   75.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      2   25.0%            Function: ^tryPackage node:internal/modules/cjs/loader:349:20
+      3   27.3%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:505:28
+      3  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+     11   50.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:505:28
+      9   81.8%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      9  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      2   18.2%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:865:35
+      1   50.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:771:24
+      1   50.0%            Function: ^Module._load node:internal/modules/cjs/loader:771:24
+     11    4.5%      D:\Program Files\nodejs\node.exe
+      1    9.1%        LazyCompile: ~stringToPath D:\angel\Documents\mocks-coderhouse\node_modules\get-intrinsic\index.js:209:41
+      1  100.0%          LazyCompile: ~GetIntrinsic D:\angel\Documents\mocks-coderhouse\node_modules\get-intrinsic\index.js:252:39
+      1  100.0%            Function: ~<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\call-bind\index.js:1:1
+      1    9.1%        LazyCompile: ~setup D:\angel\Documents\mocks-coderhouse\node_modules\connect-mongo\node_modules\debug\src\common.js:7:15
+      1  100.0%          Function: ~<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\connect-mongo\node_modules\debug\src\node.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1080:37
+      1    9.1%        LazyCompile: ~pluralize D:\angel\Documents\mocks-coderhouse\node_modules\mongoose\lib\helpers\pluralize.js:82:19
+      1  100.0%          LazyCompile: ~exports.toCollectionName D:\angel\Documents\mocks-coderhouse\node_modules\mongoose\lib\utils.js:43:36
+      1  100.0%            LazyCompile: ~Mongoose._model D:\angel\Documents\mocks-coderhouse\node_modules\mongoose\lib\index.js:572:37
+      1    9.1%        LazyCompile: *appendEscaped D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:416:40
+      1  100.0%          LazyCompile: *compile D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1  100.0%            LazyCompile: *<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      1    9.1%        Function: ^serializeInto D:\angel\Documents\mocks-coderhouse\node_modules\bson\lib\parser\serializer.js:553:23
+      1  100.0%          Function: ^serialize D:\angel\Documents\mocks-coderhouse\node_modules\bson\lib\bson.js:110:19
+      1  100.0%            Function: ^serializeBson D:\angel\Documents\mocks-coderhouse\node_modules\mongodb\lib\cmap\commands.js:379:18
+      1    9.1%        Function: ^realpathSync node:fs:2460:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      1    9.1%        Function: ^quotedString D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:118:38
+      1  100.0%          Function: ^pushSource D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:881:34
+      1  100.0%            Function: ^compile D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1    9.1%        Function: ^parseAcceptEncoding D:\angel\Documents\mocks-coderhouse\node_modules\negotiator\lib\encoding.js:31:29
+      1  100.0%          Function: ^preferredEncodings D:\angel\Documents\mocks-coderhouse\node_modules\negotiator\lib\encoding.js:138:28
+      1  100.0%            Function: ^encodings D:\angel\Documents\mocks-coderhouse\node_modules\negotiator\index.js:52:52
+      1    9.1%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:771:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1020:36
+      1    9.1%        Function: ^<anonymous> node:internal/fs/utils:360:35
+      1  100.0%          Function: ^<anonymous> node:internal/fs/utils:671:38
+      1  100.0%            Function: ^realpathSync node:fs:2460:22
+      9    3.7%      Function: ^openSync node:fs:585:18
+      9  100.0%        Function: ^readFileSync node:fs:459:22
+      9  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      9  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:992:33
+      8    3.3%      Function: ^statSync node:fs:1580:18
+      8  100.0%        Function: ^tryStat D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\view.js:174:17
+      8  100.0%          Function: ^resolve D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\view.js:146:42
+      8  100.0%            Function: ^lookup D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\view.js:104:40
+      5    2.1%      LazyCompile: *compile D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      4   80.0%        Function: ^compileInput D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:507:24
+      4  100.0%          Function: ^ret D:\angel\Documents\mocks-coderhouse\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:515:15
+      4  100.0%            Function: ^ExpressHandlebars._renderTemplate D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:321:60
+      1   20.0%        LazyCompile: *<anonymous> D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      1  100.0%          LazyCompile: *step D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:31:18
+      1  100.0%            LazyCompile: *fulfilled D:\angel\Documents\mocks-coderhouse\node_modules\express-handlebars\dist\express-handlebars.js:21:27
+      5    2.1%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      5  100.0%        Function: ^Socket._writeGeneric node:net:848:42
+      5  100.0%          Function: ^Socket._writev node:net:880:36
+      5  100.0%            Function: ^doWrite node:internal/streams/writable:400:17
+      5    2.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1   20.0%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:assert:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    1.6%      Function: ^readSync node:fs:699:18
+      3   75.0%        Function: ^tryReadSync node:fs:438:21
+      3  100.0%          Function: ^readFileSync node:fs:459:22
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1   25.0%        LazyCompile: *readFileSync node:fs:459:22
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:771:24
+      3    1.2%      LazyCompile: *next D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:177:16
+      1   33.3%        Function: ^session D:\angel\Documents\mocks-coderhouse\node_modules\express-session\index.js:179:26
+      1  100.0%          Function: ^handle D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            Function: ^trim_prefix D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:293:23
+      1   33.3%        Function: ^handle D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:136:31
+      1  100.0%          Function: ^router D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:46:18
+      1  100.0%            Function: ^handle D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\layer.js:86:49
+      1   33.3%        Function: ^cookieParser D:\angel\Documents\mocks-coderhouse\node_modules\cookie-parser\index.js:44:32
+      1  100.0%          LazyCompile: *trim_prefix D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:293:23
+      1  100.0%            LazyCompile: *next D:\angel\Documents\mocks-coderhouse\node_modules\express\lib\router\index.js:177:16
+      3    1.2%      Function: ^realpathSync node:fs:2460:22
+      3  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:404:20
+      3  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:395:17
+      3  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:411:23
+      3    1.2%      Function: ^closeSync node:fs:535:19
+      3  100.0%        Function: ^closeSync D:\angel\Documents\mocks-coderhouse\node_modules\graceful-fs\graceful-fs.js:72:24
+      3  100.0%          Function: ^readFileSync node:fs:459:22
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1135:37
+

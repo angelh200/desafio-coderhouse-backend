@@ -30,8 +30,7 @@ router.get('/logout', (req, res) => {
 })
 
 router.get('/info', (req, res) => {
-  console.log(process.memoryUsage());
-  res.render('info', {
+  const info = {
     inputArgs: process.argv.slice(2),
     path: process.argv[0],
     os: process.platform,
@@ -39,7 +38,8 @@ router.get('/info', (req, res) => {
     version: process.version,
     cwd: process.cwd(),
     memory: process.memoryUsage()
-  });
+  };
+  res.render('info', info);
 });
 
 module.exports = router;
